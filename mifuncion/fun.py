@@ -1,4 +1,4 @@
-def mifuncion(request):
+def mifuncion(event, context):
     resultado = "Hola mundo"
 
     # Imprimir el resultado
