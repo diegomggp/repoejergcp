@@ -9,4 +9,3 @@ steps:
   - --trigger-bucket=mibucketdiego
   - --runtime=python312
   - --allow-unauthenticated
-  - --memory=256MB
