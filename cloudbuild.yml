@@ -6,6 +6,6 @@ steps:
   - mifuncion
   - --region=europe-west1
   - --source=./mifuncion
-  - --trigger-bucket=mibucketdiego
+  - --trigger-bucket=gs://bucket_cloud_build
   - --runtime=python312
   - --allow-unauthenticated
