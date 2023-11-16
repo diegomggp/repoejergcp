@@ -3,9 +3,9 @@ steps:
   args:
   - functions
   - deploy
-  - mifuncion
-  - --region=europe-west1
-  - --source=./mifuncion
-  - --trigger-bucket=gs://bucket_cloud_build
+  - hello_gcs
   - --runtime=python312
+  - --region=europe-west1
+  - --trigger-bucket=gs://bucketej
   - --allow-unauthenticated
+  - --source=./mifuncion
