@@ -5,6 +5,8 @@ from google.cloud import firestore
 storage_client = storage.Client()
 firestore_client = firestore.Client()
 
+
+
 def hello_gcs(event, context):
     
     # Descarga el archivo desde Cloud Storage

@@ -1,0 +1,41 @@
+steps:
+  # Paso 1: Construir la imagen Docker
+  - name: 'docker'
+    args: ['build', '-t', 'docker.io/diegomggp/mimagenapp:v4', '.']
+
+  # Paso 2: Autenticar con Docker Hub
+  - name: 'docker'
+    args: ['login', '-u', 'diegomggp', '-p',                                                                                                                                   'sardinero1991do']
+
+  # Paso 3: Empujar la imagen a Docker Hub
+  - name: 'docker'
+    args: ['push', 'docker.io/diegomgg/mimagenapp:v4']
+
+  # Paso 4: Desplegar en Cloud Run
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'mirunauto'
+      - '--image'
+      - 'docker.io/diegomgg/mimagenapp'
+      - '--platform'
+      - 'managed'
+      - '--region'
+      - 'europe-west1'
+      - --source=./miapp
+
+
+  # Crear CLOUD FUNCTION
+
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+    - functions
+    - deploy
+    - hello_gcs
+    - --runtime=python312
+    - --region=europe-west1
+    - --trigger-bucket=gs://bucketej2
+    - --allow-unauthenticated
+    - --source=./mifuncion
