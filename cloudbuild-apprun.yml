@@ -37,7 +37,6 @@ steps:
       - managed
       - --region
       - europe-west1
-      - --source=./miapp
       - --port=5000
 images: 
 - europe-west1-docker.pkg.dev/prodiego2/misimagenes/appfinalgcp
