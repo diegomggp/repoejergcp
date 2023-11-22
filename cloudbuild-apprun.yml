@@ -37,6 +37,7 @@ steps:
       - managed
       - --region
       - europe-west1
+      - --allow-unauthenticated
       - --port=5000
 images: 
 - europe-west1-docker.pkg.dev/prodiego2/misimagenes/appfinalgcp
