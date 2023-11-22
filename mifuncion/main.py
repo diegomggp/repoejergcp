@@ -18,4 +18,4 @@ def hello_gcs(event, context):
     data = json.loads(content)
     print(event)
     print(data)
-    firestore_client.collection("diegocol").document(document_name).set(data)
+    firestore_client.collection("coldiego").document(document_name).set(data)
