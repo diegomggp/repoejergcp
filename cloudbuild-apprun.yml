@@ -10,7 +10,6 @@ steps:
     - --runtime=python312
     - --region=europe-west1
     - --trigger-bucket=gs://bucketej2
-    - --allow-unauthenticated
     - --source=./mifuncion
 
 
@@ -18,7 +17,6 @@ steps:
 
   - name: 'gcr.io/cloud-builders/docker'
     args: [ 'build', '-t', 'europe-west1-docker.pkg.dev/prodiego2/misimagenes/appfinalgcp', '.' ]
-   
 
 
    # Paso 3: Empujar la imagen 
